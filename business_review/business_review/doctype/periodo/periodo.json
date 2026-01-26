@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:periodo",
+ "creation": "2026-01-25 13:31:17.106879",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_8p5h",
+  "periodo",
+  "mes",
+  "fiscal",
+  "fecha"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_8p5h",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "periodo",
+   "fieldtype": "Data",
+   "label": "Periodo",
+   "unique": 1
+  },
+  {
+   "fieldname": "fiscal",
+   "fieldtype": "Link",
+   "label": "A\u00f1o Fiscal",
+   "options": "Fiscal Year"
+  },
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha"
+  },
+  {
+   "fieldname": "mes",
+   "fieldtype": "Link",
+   "label": "Mes",
+   "options": "Mes"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-25 17:35:21.739494",
+ "modified_by": "Administrator",
+ "module": "Business Review",
+ "name": "Periodo",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "fecha",
+ "sort_order": "ASC",
+ "states": []
+}

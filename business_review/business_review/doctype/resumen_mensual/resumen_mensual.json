@@ -1,0 +1,360 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:rm_name",
+ "creation": "2026-01-25 19:28:52.525019",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "hdg_01",
+  "rm_name",
+  "rm_unidad_neg",
+  "rm_periodo",
+  "rm_abbr",
+  "column_break_vmku",
+  "hdg_0",
+  "rm_tipo_registro",
+  "section_break_iblo",
+  "hdg_02",
+  "rm_ventas",
+  "rm_costos_sueldos",
+  "rm_costos_subcontratos",
+  "rm_costos_lic_comp",
+  "rm_adquisiciones",
+  "section_break_rxgy",
+  "hdg_03",
+  "rm_cost_prod",
+  "rm_gross_profit",
+  "rm_gp_per",
+  "section_break_jiak",
+  "hdg_04",
+  "rm_viaticos",
+  "rm_eje",
+  "rm_sales_mark",
+  "column_break_lsnw",
+  "hdg_05",
+  "rm_tot_cos",
+  "rm_ebitda1",
+  "rm_ebitda_per",
+  "section_break_fcwl",
+  "hdg_06",
+  "rm_sueldos_gast",
+  "rm_otros_gast",
+  "rm_gast_renta",
+  "rm_gast_grals",
+  "rm_gast_admon",
+  "rm_gast_vehi",
+  "rm_gast_prim",
+  "rm_gast_hon",
+  "rm_gast_pap",
+  "rm_gast_cuotas",
+  "rm_gast_cap",
+  "rm_seg_fian",
+  "rm_gast_fin",
+  "rm_gast_eventos",
+  "column_break_6io5",
+  "hdg_07",
+  "rm_tot_ind",
+  "rm_ebitda2",
+  "rm_ebitda2_per"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_iblo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rm_unidad_neg",
+   "fieldtype": "Link",
+   "label": "Unidad de Negocio",
+   "options": "Unidad de Negocio"
+  },
+  {
+   "fieldname": "rm_periodo",
+   "fieldtype": "Link",
+   "label": "Periodo",
+   "options": "Periodo"
+  },
+  {
+   "fetch_from": "rm_unidad_neg.br_abbr",
+   "fieldname": "rm_abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "abbr"
+  },
+  {
+   "fieldname": "rm_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "hdg_01",
+   "fieldtype": "Heading",
+   "label": "Datos Generales"
+  },
+  {
+   "fieldname": "hdg_02",
+   "fieldtype": "Heading",
+   "label": "Gross Profit"
+  },
+  {
+   "fieldname": "rm_costos_sueldos",
+   "fieldtype": "Currency",
+   "label": "Sueldos y Salarios"
+  },
+  {
+   "fieldname": "rm_costos_subcontratos",
+   "fieldtype": "Currency",
+   "label": "Subcontratos"
+  },
+  {
+   "fieldname": "rm_costos_lic_comp",
+   "fieldtype": "Currency",
+   "label": "Licencias y Eq. de Computo"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.rm_unidad_neg == \"Interiores\";",
+   "fieldname": "rm_adquisiciones",
+   "fieldtype": "Currency",
+   "label": "Adquisiciones (Int)."
+  },
+  {
+   "fieldname": "rm_ventas",
+   "fieldtype": "Currency",
+   "label": "Ingresos"
+  },
+  {
+   "fieldname": "section_break_rxgy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hdg_03",
+   "fieldtype": "Heading",
+   "label": "Resumen"
+  },
+  {
+   "fieldname": "rm_gross_profit",
+   "fieldtype": "Currency",
+   "label": "Gross Profit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rm_gp_per",
+   "fieldtype": "Percent",
+   "label": "GP %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rm_cost_prod",
+   "fieldtype": "Currency",
+   "label": "Total Costo de Producci\u00f3n",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_jiak",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rm_viaticos",
+   "fieldtype": "Currency",
+   "label": "Eventos y Vi\u00e1ticos"
+  },
+  {
+   "fieldname": "rm_sales_mark",
+   "fieldtype": "Currency",
+   "label": "Promoci\u00f3n y Marketing"
+  },
+  {
+   "fieldname": "column_break_lsnw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hdg_04",
+   "fieldtype": "Heading",
+   "label": "Gastos Directos"
+  },
+  {
+   "fieldname": "rm_tot_cos",
+   "fieldtype": "Currency",
+   "label": "Total Costo de Ventas",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rm_ebitda1",
+   "fieldtype": "Currency",
+   "label": "EBITDA 1 ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rm_ebitda_per",
+   "fieldtype": "Percent",
+   "label": "EBITDA 1 %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rm_eje",
+   "fieldtype": "Currency",
+   "label": "Sueldos Ejecutivos"
+  },
+  {
+   "fieldname": "hdg_05",
+   "fieldtype": "Heading",
+   "label": "Resumen"
+  },
+  {
+   "fieldname": "section_break_fcwl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "hdg_06",
+   "fieldtype": "Heading",
+   "label": "Gastos Indirectos"
+  },
+  {
+   "fieldname": "rm_sueldos_gast",
+   "fieldtype": "Currency",
+   "label": "Sueldos Gastos"
+  },
+  {
+   "fieldname": "rm_otros_gast",
+   "fieldtype": "Currency",
+   "label": "Otros Gastos"
+  },
+  {
+   "fieldname": "rm_gast_grals",
+   "fieldtype": "Currency",
+   "label": "Gastos Generales"
+  },
+  {
+   "fieldname": "rm_gast_admon",
+   "fieldtype": "Currency",
+   "label": "Gastos Administraci\u00f3n"
+  },
+  {
+   "fieldname": "rm_gast_vehi",
+   "fieldtype": "Currency",
+   "label": "Gastos y Mtto Vehiculos"
+  },
+  {
+   "fieldname": "rm_gast_prim",
+   "fieldtype": "Currency",
+   "label": "Servicios Primarios"
+  },
+  {
+   "fieldname": "rm_gast_hon",
+   "fieldtype": "Currency",
+   "label": "Honorarios"
+  },
+  {
+   "fieldname": "rm_gast_pap",
+   "fieldtype": "Currency",
+   "label": "Papeleria"
+  },
+  {
+   "fieldname": "rm_gast_cuotas",
+   "fieldtype": "Currency",
+   "label": "Cuotas y Suscripciones"
+  },
+  {
+   "fieldname": "rm_seg_fian",
+   "fieldtype": "Currency",
+   "label": "Seguros y Fianzas"
+  },
+  {
+   "fieldname": "rm_gast_fin",
+   "fieldtype": "Currency",
+   "label": "Gastos Financieros"
+  },
+  {
+   "fieldname": "column_break_6io5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "hdg_07",
+   "fieldtype": "Heading",
+   "label": "Resumen"
+  },
+  {
+   "fieldname": "rm_tot_ind",
+   "fieldtype": "Currency",
+   "label": "Total Costo Indirecto",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rm_ebitda2",
+   "fieldtype": "Currency",
+   "label": "EBITDA 2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rm_ebitda2_per",
+   "fieldtype": "Percent",
+   "label": "EBITDA 2 %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_vmku",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rm_tipo_registro",
+   "fieldtype": "Select",
+   "label": "Tipo de Registro",
+   "options": "Real\nPresupuesto"
+  },
+  {
+   "fieldname": "hdg_0",
+   "fieldtype": "Heading",
+   "label": "Tipo de Registro"
+  },
+  {
+   "fieldname": "rm_gast_renta",
+   "fieldtype": "Currency",
+   "label": "Renta"
+  },
+  {
+   "fieldname": "rm_gast_cap",
+   "fieldtype": "Currency",
+   "label": "Capacitaciones"
+  },
+  {
+   "fieldname": "rm_gast_eventos",
+   "fieldtype": "Currency",
+   "label": "Eventos"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-01-26 09:06:18.795512",
+ "modified_by": "Administrator",
+ "module": "Business Review",
+ "name": "Resumen Mensual",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "rm_periodo",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "rm_name"
+}
