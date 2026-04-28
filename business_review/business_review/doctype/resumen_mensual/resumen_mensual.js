@@ -6,7 +6,7 @@ frappe.ui.form.on("Resumen Mensual", {
     before_save: function(frm) {
         // Combines field_a and field_b into combined_field
         let name = (frm.doc.rm_periodo || '') + '_' + (frm.doc.rm_abbr || '');
-        let cos = (frm.doc.rm_costos_sueldos) + (frm.doc.rm_costos_subcontratos) + (frm.doc.rm_costos_lic_comp) + (frm.doc.rm_adquisiciones);
+        let cos = (frm.doc.rm_costos_sueldos) + (frm.doc.rm_costos_subcontratos) + (frm.doc.rm_costos_lic_comp);
         let gp = (frm.doc.rm_ventas) - cos;
         let gp_per = gp / frm.doc.rm_ventas * 100;
         let total_cos = (frm.doc.rm_viaticos) + (frm.doc.rm_eje) + (frm.doc.rm_sales_mark);
